@@ -10,7 +10,9 @@ A modern and user-friendly platform for learners and instructors to connect, sha
 - **Quizzes and Certifications:** Interactive quizzes and certifications upon completion.
 
 ## Installation
-Clone the repository:
+1. Clone the repository:
+  ```bash
  git clone git clone https://github.com/your-repo/learning-platform.git
- cd learning-platform
+```
+2. cd learning-platform
 
