@@ -12,7 +12,7 @@ A modern and user-friendly platform for learners and instructors to connect, sha
 ## Installation
 1. Clone the repository:
   ```bash
- git clone git clone https://github.com/your-repo/learning-platform.git
+ git clone git clone https://github.com/mahahassan25/learning-platform.git
 ```
 2. cd learning-platform
 
