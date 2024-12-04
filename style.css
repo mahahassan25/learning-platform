@@ -1,0 +1,412 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --bacgroundColor:#294190 ;
+    --mainColor:#FAFBFC ;
+    --bodyText : 1rem ;
+    --gridGap: 1.3rem ;
+    --sectionPadding: 2rem 1rem ;
+    --letterSpacing:0.3rem ;
+}
+body{
+    background-color: var(--mainColor);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+header{
+    background-color: var(--bacgroundColor);
+    color: white;
+    padding: var(--sectionPadding);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: flex;
+    gap: var(--gridGap);
+    align-items: center;
+}
+.logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.logo span{
+    font-weight: bold;
+    font-size: large;
+    letter-spacing: var(--letterSpacing);
+}
+.menu{
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+.menu{
+    display: flex;
+    font-size: 20px;
+  }
+nav ul{
+    position: fixed;
+    right: -100%;
+}
+
+}
+
+nav ul{
+    display:flex;
+    gap: 20px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+nav ul li{
+    list-style: none;
+    cursor: pointer;
+    border: 1px white solid;
+    padding: 5px 10px;
+    border-radius: 10px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    
+}
+nav ul li:hover{
+    color: beige;
+    border: none;
+}
+.intro{
+    display:  flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--mainColor);
+    padding: var(--sectionPadding);
+}
+.intro img{
+    width: 300px;
+    margin-top: 30px;
+}
+.intro div{
+    display: flex;
+    flex-direction: column;
+    gap: var(--gridGap);
+    justify-content: center;
+    align-items: center;
+    color: var(--bacgroundColor);
+}
+.intro p:first-child{
+    font-weight: bold;
+    font-size: 30px;
+}
+.intro button{
+    background-color: var(--bacgroundColor);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .intro{
+        flex-direction: row;
+        justify-content: space-around;
+        
+    }
+}
+.courses div{
+    width: 310px;
+    height: 310px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   border: 1px var(--bacgroundColor) solid;
+   border-radius: 20%;
+   padding: 20px;
+   color: var(--bacgroundColor);
+   position: relative;
+   overflow: hidden;
+   cursor: pointer;
+}
+.des{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+}
+.courses div img{
+    position: absolute;
+    top: 0;
+    width:inherit;
+    height: 60%;
+    overflow: hidden;
+}
+.courses div:hover{
+    transform: scale(1.1);
+}
+.courses div .des p:first-of-type{
+    font-weight: bold;
+    font-size: large;
+    
+}
+.courses{
+    padding: var(--sectionPadding);
+    background-color: var(--mainColor);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gridGap);
+    justify-content: center;
+    margin-top: 20px;
+}
+.Testimonial{
+    background-color: var(--mainColor);
+    margin-top: 10px;
+    background-color: var(--bacgroundColor);
+    color: white;
+    padding: var(--sectionPadding);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--gridGap);
+    justify-content: center;
+}
+.Testimonial div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gridGap);
+    justify-content: center;
+}
+.Testimonial .card{
+    margin-top: 16px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    color: var(--bacgroundColor);
+    border: 1px white solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gridGap);
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+}
+.Testimonial .card img{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    border: 5px white solid;
+     position: absolute;
+    top: -26px;
+}
+.Testimonial .card div{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+} 
+.Testimonial .card div p:first-child {
+    font-weight: bold;
+    font-size: large;
+}
+.Testimonial .card div .stars{
+    display: flex;
+    flex-direction: row;
+}
+.Testimonial .card div .stars i{
+    color: rgb(228, 228, 71);
+}
+.Testimonial .title{
+    align-self: center;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: var(--letterSpacing);
+}
+.form{
+    padding: var(--sectionPadding);
+    background-color: var(--mainColor);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around;
+}
+.form-container {
+    margin-top: 20px;
+     width: 100%;
+     max-width: 500px;
+     background: #fff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form h2 {
+   margin-bottom: 20px;
+   text-align: center;
+   color: #444;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+input, textarea,.form  button {
+   width: 100%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+}
+
+input:focus, textarea:focus {
+  border-color:var(--bacgroundColor);
+  outline: none;
+}
+
+button {
+  background-color: var(--bacgroundColor);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+   background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+   .form-container {
+   padding: 15px;
+   }
+}
+.diffContact{
+  width: 100%;
+  color: var(--bacgroundColor);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+.diffContact p{
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: var(--letterSpacing);
+}
+.diffContact ul{
+   display:  flex;
+   list-style: none;
+   justify-content: space-around;
+   width: 100%;
+}
+.diffContact ul i{
+  font-size: 40px;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  .form {
+     flex-direction: row;
+    }
+}
+@media (min-width: 992px) {
+ .diffContact{
+     gap: 50px;
+ }
+.diffContact ul{
+    width: 50%;
+}
+ .diffContact p{
+   font-size: 30px;
+   letter-spacing: 3px;
+}
+}
+.partners{
+    padding: var(--sectionPadding);
+    background-color: var(--mainColor);
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.partners p{
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: var(--bacgroundColor);
+}
+.partners div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.partners img{
+    width: 110px;
+}
+.coursesHeader{
+    margin-top: 5px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    color: var(--bacgroundColor);
+}
+footer{
+    margin-top: 10px;
+    background-color: var(--bacgroundColor);
+    color: white;
+    padding: var(--sectionPadding);
+    text-align: center;
+}
+.features{
+    background-color: var(--bacgroundColor);
+    color: white;
+    padding: var(--sectionPadding);
+    display:  flex;
+    flex-direction: column;
+    gap: var(--gridGap);
+    align-items: center;
+}
+.features .title{
+    font-size: 1.5rem;
+    letter-spacing: var(--letterSpacing);
+    font-weight: bold;
+}
+.features img{
+    width: 90px;
+    height: 90px;
+    border-radius: 100%;
+
+}
+.features .container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--gridGap);
+}
+.features .featureCard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gridGap);
+}
+.features .featureCard div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+}
+.features .featureCard button:hover{
+ border: 1px white solid;
+ padding: 5px;
+ border-radius: 10px;
+}
